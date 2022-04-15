@@ -1,6 +1,9 @@
 .headerContainer {
-  height: 5rem;
-  background: var(--black);
+  background: var(--background-2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .headerContent {
@@ -13,9 +16,9 @@
   align-items: center;
 
   h1 {
-    color: yellow;
+    color: var(--yellow-500);
     span {
-      color: green;
+      color: var(--white);
     }
   }
 
@@ -37,7 +40,7 @@
       }
 
       &:hover {
-        color: var(--gray-300);
+        color: var(--yellow-500);
       }
 
       &.active::after {
@@ -53,7 +56,7 @@
         position: absolute;
         bottom: 1px;
         left: 0;
-        background: yellow;
+        background: var(--yellow-500);
       }
     }
   }

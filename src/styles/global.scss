@@ -7,7 +7,12 @@
 :root {
   --white: #ffffff;
   --black: #000;
-  --gray-300: #a8a8b3;
+
+  --white-300: #FAF6ED;
+  --blue-300: #81A8F7;
+  --yellow-500: #FFD513;
+  --background: #2A2D33;
+  --background-2:#1A1A1A;
 }
 
 @media (max-width: 1080px) {
@@ -23,8 +28,8 @@
 }
 
 body {
-  background: var(--gray-300);
-  color: var(--white);
+  background: var(--background);
+  color: var(--black);
 }
 
 body,
@@ -32,7 +37,7 @@ input,
 textarea,
 select,
 button {
-  font: 400 1rem 'Roboto', sans-serif;
+  font: 400 1rem 'Newsreader', serif;
 }
 
 button {

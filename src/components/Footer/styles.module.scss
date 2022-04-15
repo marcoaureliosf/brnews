@@ -1,6 +1,6 @@
 .footerContainer {
   height: 30rem;
-  background: var(--black);
+  background: var(--background-2);
   display: flex;
   align-items: center;
 }
@@ -28,7 +28,7 @@
       transition: color 0.2s;
 
       &:hover {
-        color: yellow;
+        color: var(--yellow-500);
         text-decoration: underline;
       }
     }
@@ -37,7 +37,6 @@
   p {
     margin-top: 3rem;
     font-size: 0.8rem;
-    color: var(--gray-300);
 
     &:hover {
       text-decoration: underline;

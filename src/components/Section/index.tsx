@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 
 type Post = {
+  category: string
   title: string
   author: string
   description: string
@@ -19,15 +20,15 @@ export function Section({ posts }: PostsProps) {
     <>
       <main className={styles.container}>
 
-        <h1>Últimas Notícias</h1>
+        <h1>Últimas Notícias: {posts[0].category}</h1>
         
         <div className={styles.posts}>
           {posts.map((post) => (
-            <article key={post.url}>
+            <article key={post.title}>
               <h2>{post.title}</h2>
-              <p>{post.description}..</p>
-              <a href={post.url} target='_blank'>Veja a matéria completa aqui</a>
-              <img src={post.urlToImage ? post.urlToImage : 'https://thumbs.dreamstime.com/b/no-image-available-icon-vector-illustration-flat-design-140476186.jpg'} alt={post.title} />
+              <p>{String( post.description)}..</p>
+              <a href={post.url} target='_blank' rel='noopener'>Veja a matéria completa aqui</a>
+              <img src={post.urlToImage ? post.urlToImage : '/images/default-Img.jpg'} alt={post.title} />
               <time>{post.publishedAt}</time>
             </article>
           ))}

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 export function Footer() {
@@ -8,25 +9,39 @@ export function Footer() {
           <h2>News</h2>
 
           <li>
-            <a href="/">Geral</a>
+            <Link href="/">
+              <a>Geral</a>
+            </Link>
           </li>
           <li>
-            <a href="/negocios">Negócios</a>
+            <Link href="/negocios">
+              <a>Negócios</a>
+            </Link>
           </li>
           <li>
-            <a href="/entretenimento">Entretenimento</a>
+            <Link href="/entretenimento">
+              <a>Entretenimento</a>
+            </Link>
           </li>
           <li>
-            <a href="/saude">Saúde</a>
+            <Link href="/saude">
+              <a>Saúde</a>
+            </Link>
           </li>
           <li>
-            <a href="/ciencia">Ciência</a>
+            <Link href="/ciencia">
+              <a>Ciência</a>
+            </Link>
           </li>
           <li>
-            <a href="/esportes">Esportes</a>
+            <Link href="/esportes">
+              <a>Esportes</a>
+            </Link>
           </li>
           <li>
-            <a href="/tecnologia">Tecnologia</a>
+            <Link href="/tecnologia">
+              <a>Tecnologia</a>
+            </Link>
           </li>
         </ul>
 

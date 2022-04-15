@@ -1,6 +1,6 @@
 import type { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Section } from '../components/Section'
+import { Section } from '../../components/Section'
 
 type Post = {
   category: string
@@ -17,11 +17,11 @@ interface PostsProps {
   posts: Post[]
 }
 
-const Home = ({ posts }: PostsProps) => {
+const PostsSaude = ({ posts }: PostsProps) => {
   return (
     <>
       <Head>
-        <title>Geral | br.news</title>
+        <title>Saúde | br.news</title>
       </Head>
       
       <Section posts={posts} />
@@ -30,10 +30,10 @@ const Home = ({ posts }: PostsProps) => {
   )
 }
 
-export default Home
+export default PostsSaude
 
 export const getStaticProps: GetStaticProps = async () => {
-  const category ='general'
+  const category = 'health'
   
   const data = await fetch(
     `https://newsapi.org/v2/top-headlines?category=${category}&country=br&apiKey=${process.env.API_KEY}`
@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const posts = data.articles.map((post: any) => {
     return {
-      category: 'Geral',
+      category: 'Saúde',
       title: post.title,
       author: post.author,
       description: post.description,

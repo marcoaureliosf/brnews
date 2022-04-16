@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
     `https://newsapi.org/v2/top-headlines?category=${category}&country=br&apiKey=${process.env.API_KEY}`
   ).then((response) => response.json())
 
-  const posts = data.articles.map((post: any) => {
+  const posts = data.articles.map((post: Post) => {
     return {
       category: 'Tecnologia',
       title: post.title,

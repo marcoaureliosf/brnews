@@ -17,7 +17,6 @@ interface PostsProps {
 
 export function Section({ posts }: PostsProps) {
   return (
-    <>
       <main className={styles.container}>
 
         <h1>Últimas Notícias: {posts[0].category}</h1>
@@ -34,6 +33,5 @@ export function Section({ posts }: PostsProps) {
           ))}
         </div>
       </main>
-    </>
   )
 }

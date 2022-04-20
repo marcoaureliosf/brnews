@@ -1,4 +1,4 @@
-import type { GetStaticProps } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { Section } from '../components/Section'
 
@@ -23,9 +23,8 @@ const Home = ({ posts }: PostsProps) => {
       <Head>
         <title>Geral | br.news</title>
       </Head>
-      
-      <Section posts={posts} />
 
+      <Section posts={posts} />
     </>
   )
 }
@@ -34,7 +33,7 @@ export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
   const category ='general'
-  
+
   const data = await fetch(
     `https://newsapi.org/v2/top-headlines?category=${category}&country=br&apiKey=${process.env.API_KEY}`
   ).then((response) => response.json())
@@ -55,7 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
       }),
     }
   })
-
+ 
   return {
     props: {
       posts,

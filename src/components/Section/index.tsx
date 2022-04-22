@@ -25,8 +25,8 @@ export function Section({ posts }: PostsProps) {
           {posts.map((post) => (
             <article key={post.title}>
               <h2>{post.title}</h2>
-              <p>{String( post.description)}..</p>
-              <a href={post.url} target='_blank' rel='noopener'>Veja a matéria completa aqui</a>
+              <p>{String(post.description)}..</p>
+              <a href={post.url} target='_blank' rel='noreferrer'>Veja a matéria completa aqui</a>
               <img src={post.urlToImage ? post.urlToImage : '/images/default-Img.jpg'} alt={post.title} />
               <time>{post.publishedAt}</time>
             </article>

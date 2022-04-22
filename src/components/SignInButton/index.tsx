@@ -1,4 +1,4 @@
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 import { AiFillGoogleCircle } from 'react-icons/ai'
 import styles from './styles.module.scss'
 
@@ -10,7 +10,7 @@ export function SignInButton() {
       <button
         type="button"
         className={styles.signInButton}
-        onClick={() => signOut()}
+        // onClick={() => signOut()}
       >
         <AiFillGoogleCircle color="#04d361" />
         {session.user.name}
@@ -21,7 +21,7 @@ export function SignInButton() {
       <button
         type="button"
         className={styles.signInButton}
-        onClick={() => signIn('google')}
+        // onClick={() => signIn('google')}
       >
         <AiFillGoogleCircle color="#D92424" />
         Entre com gmail
